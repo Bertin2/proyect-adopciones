@@ -3,7 +3,7 @@ const{check, validationResult} = require('express-validator');
 const generatePetValidators = () =>[
     check('alias').notEmpty().isLength({max:50}).withMessage("Invalid alias"),
     check('type').notEmpty().isLength({max:3}).withMessage("Invalid type"),
-    check('color').notEmpty().isLength({max:10}).isNumeric().withMessage("Invalid color"),
+    //check('color').notEmpty().isLength({max:10}).isNumeric().withMessage("Invalid color"),
     check('notes').notEmpty().isLength({max:150}).withMessage("Invalid notes"),
 ]
 
