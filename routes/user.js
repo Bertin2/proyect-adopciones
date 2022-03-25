@@ -6,7 +6,7 @@ const jwtToken = require("../validations/jwtValidation");
 router.get('/user',  jwtToken.validateToken, userValidator.id,    usersController.getUser);
 router.get('/users', jwtToken.validateToken,usersController.getUsers);
 router.post('/login',userValidator.id,    usersController.getLogin);
-router.post('/user', usersController.postUser);
+router.post('/user',userValidator.add, usersController.postUser);
 router.put('/user', userValidator.update, usersController.putUser);
 router.delete('/user', userValidator.id,  usersController.deleteUser);
 
