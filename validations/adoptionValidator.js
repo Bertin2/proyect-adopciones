@@ -3,7 +3,7 @@ const{check, validationResult} = require('express-validator');
 const generateAdoptionValidators = () =>[
     check('user_id').notEmpty().isLength({max:50}).withMessage("Invalid user id"),
     check('pet_id').notEmpty().isLength({max:3}).withMessage("Invalid pet id"),
-    check('date').notEmpty().isDate().withMessage("Invalid date"),
+    check('date').notEmpty().withMessage("Invalid date"),
 ]
 
 const generateIdValidators = () =>[
