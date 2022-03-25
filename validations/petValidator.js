@@ -12,10 +12,10 @@ const generateIdValidators = () =>[
 ]
 const updatePetValidators = () =>[
     check('id').notEmpty().isNumeric().withMessage("Invalid id"),
-    check('alias').notEmpty().isLength({max:50}).withMessage("Invalid alias"),
-    check('type').notEmpty().isLength({max:3}).withMessage("Invalid type"),
-    check('color').notEmpty().isLength({max:10}).withMessage("Invalid color"),
-    check('notes').notEmpty().isLength({max:150}).withMessage("Invalid notes"),
+    check('alias').isLength({max:50}).withMessage("Invalid alias"),
+    check('type').isLength({max:3}).withMessage("Invalid type"),
+    check('color').isLength({max:10}).withMessage("Invalid color"),
+    check('notes').isLength({max:150}).withMessage("Invalid notes"),
 ]
 
 const reporter = (req, res, next) => {
