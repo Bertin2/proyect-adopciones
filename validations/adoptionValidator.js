@@ -13,7 +13,7 @@ const updateAdoptionValidators = () =>[
     check('id').notEmpty().isNumeric().withMessage("Invalid id"),
     check('user_id').notEmpty().isNumeric().withMessage("Invalid user id"),
     check('pet_id').notEmpty().isNumeric().withMessage("Invalid pet id"),
-    check('date').notEmpty().isDate().withMessage("Invalid date"),
+    check('date').notEmpty().isDate().withMessage("Invalid date")
 
 ]
 
