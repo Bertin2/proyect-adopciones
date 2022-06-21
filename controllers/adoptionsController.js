@@ -90,7 +90,7 @@ controller.getAdoptions = (req, res) =>
             format.message = "Error to connect to DB, please contact to admin";
             format.success = false;
             res.status(500);
-            res.json(format)
+            res.json(format);
         }
         else
         {
