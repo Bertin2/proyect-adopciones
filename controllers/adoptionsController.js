@@ -1,3 +1,6 @@
+let controller = {};
+let format = require("../format").format;
+const res = require("express/lib/response");
 
 controller.getAdoption = (req, res) =>
 {
